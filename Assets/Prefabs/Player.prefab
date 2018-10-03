@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 4846159837762726}
   - component: {fileID: 20444447103694612}
   - component: {fileID: 81278865218195058}
+  - component: {fileID: 114303793518360724}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -386,8 +387,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1311180540846692}
-  m_LocalRotation: {x: -0, y: 0.89730805, z: -0, w: 0.44140497}
-  m_LocalPosition: {x: 0, y: 5.34, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4846159837762726}
@@ -396,7 +397,7 @@ Transform:
   - {fileID: 4802621765900210}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 127.61301, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4840792448075638
 Transform:
   m_ObjectHideFlags: 1
@@ -776,6 +777,17 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1202754863808280}
   m_Enabled: 1
+--- !u!114 &114303793518360724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1202754863808280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ed36229bbe4f649a4d399f87d54a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114676107755327902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -787,9 +799,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adbc2dd0e4bdc54d84400ec3270dcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 25
   rotationSpeed: 300
   eulers: {x: 0, y: 0, z: 0}
+  clampAngle: 90
 --- !u!114 &114703385700628170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -804,8 +817,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1453045930943146, guid: 004f8ad3f6b273a48b14c9a2b35aef98,
     type: 2}
   bulletSpawn: {fileID: 4284157855480296}
-  forwardSpeed: 100
-  fireSpeed: 210
+  forwardSpeed: 150
+  fireSpeed: 50
   fireRateInSeconds: 0.1
   mainCam: {fileID: 20444447103694612}
 --- !u!198 &198349654661366304
