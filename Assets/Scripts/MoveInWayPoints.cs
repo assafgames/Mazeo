@@ -11,6 +11,7 @@ public class MoveInWayPoints : MonoBehaviour {
 	public float attackRadius = 5;
 	private Vector3 nextPoint;
 	private int nextPointIndex = 0;
+	public bool stoped = false;
 
 	void Start () {
 		// add current pos as first
@@ -19,7 +20,9 @@ public class MoveInWayPoints : MonoBehaviour {
 	}
 
 	void Update () {
-
+		if(stoped){
+			return;
+		}
 		// go after player if needed
 		if (target != null && Vector3.Distance (transform.position, target.transform.position) < attackRadius) {
 			transform.LookAt (target.transform);

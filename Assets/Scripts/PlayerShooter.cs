@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooter : BaseShooter {
+public class PlayerShooter : BaseShooter, IStopable  {
 
 	public GameObject bulletPrefab;
 	public Transform bulletSpawn;
@@ -13,7 +13,22 @@ public class PlayerShooter : BaseShooter {
 
 	private bool allowfire = true;
 
-	private void Update () {
+   	private bool stoped = false;
+	public bool Stoped {
+		get {
+			return stoped;
+		}
+
+		set {
+			stoped = value;
+		}
+	}
+
+	public void Stop () {
+		this.stoped = true;
+	}
+
+    private void Update () {
 		if (Input.GetMouseButton (0) && allowfire) {
 			StartCoroutine (Fire ());
 		}
@@ -35,4 +50,5 @@ public class PlayerShooter : BaseShooter {
 		yield return new WaitForSeconds (fireRateInSeconds);
 		allowfire = true;
 	}
+
 }
