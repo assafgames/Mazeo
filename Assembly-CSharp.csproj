@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GalaxyBox1\examplescene.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
@@ -63,7 +64,10 @@
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\Burners.cs" />
      <Compile Include="Assets\Scripts\EnemyShooter.cs" />
+     <Compile Include="Assets\Scripts\EnergyCube.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
+     <Compile Include="Assets\Scripts\HealthBox.cs" />
+     <Compile Include="Assets\Scripts\HealthIndicator.cs" />
      <Compile Include="Assets\Scripts\IStopable.cs" />
      <Compile Include="Assets\Scripts\MoveInWayPoints.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
@@ -73,10 +77,12 @@
      <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
      <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
+     <None Include="Assets\Sci-Fi Styled Modular Pack\Readme.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
      <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
+     <None Include="Assets\GalaxyBox1\instructions.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />

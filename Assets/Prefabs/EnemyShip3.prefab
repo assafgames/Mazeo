@@ -254,9 +254,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156988456857410}
-  m_LocalRotation: {x: -0, y: -0.6796579, z: -0, w: 0.73352927}
-  m_LocalPosition: {x: 12.3, y: 2.02, z: 92.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.078198016, y: 0.47425684, z: -0.1424926, w: 0.86525226}
+  m_LocalPosition: {x: -16.33, y: 99.57, z: -9.52}
+  m_LocalScale: {x: 1.0000002, y: 0.9999999, z: 1.0000002}
   m_Children:
   - {fileID: 4018147998425114}
   - {fileID: 4043085324480236}
@@ -264,7 +264,7 @@ Transform:
   - {fileID: 4597220952246214}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -85.634, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.693001, y: 56.030003, z: -10.317}
 --- !u!4 &4597220952246214
 Transform:
   m_ObjectHideFlags: 1
@@ -401,11 +401,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247546251a36754c8da270f49d4e02c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1453045930943146, guid: 004f8ad3f6b273a48b14c9a2b35aef98,
+  bulletPrefab: {fileID: 1053396496268820, guid: 4f2f40cf2cfcd284795c83fc1f5de09e,
     type: 2}
   bulletSpawn: {fileID: 4798168936462912}
-  fireSpeed: 40
-  fireRate: 0.5
+  fireSpeed: 30
+  fireRate: 0.7
 --- !u!114 &114994932469397010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,17 +417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69a34f710d96f34d9183d995eae5c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
-  - {x: 64.74, y: 0, z: 121.49}
-  - {x: 56.5, y: 17.23, z: 125.9}
-  - {x: 23.8, y: 36.45, z: 99.88}
-  - {x: 55.1, y: 0, z: 91.3}
-  - {x: 40.1, y: 16.1, z: 87.8}
-  - {x: 29.3, y: 9.94, z: 109.11}
+  wayPoints: []
   pathColor: {r: 0.39999998, g: 0.82560635, b: 1, a: 1}
   speed: 2
   target: {fileID: 0}
-  attackRadius: 30
+  attackRadius: 35
   stoped: 0
 --- !u!198 &198089293536151636
 ParticleSystem:

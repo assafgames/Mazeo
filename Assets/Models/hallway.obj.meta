@@ -1,0 +1,343 @@
+fileFormatVersion: 2
+guid: 5a5e08d91d1074149a772165450b8521
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box011
+    100002: Box017
+    100004: Box018
+    100006: Box019
+    100008: Box020
+    100010: Box021
+    100012: Box022
+    100014: Box023
+    100016: Cylinder005
+    100018: Cylinder013
+    100020: Cylinder014
+    100022: Cylinder015
+    100024: Cylinder016
+    100026: Cylinder017
+    100028: Cylinder018
+    100030: //RootNode
+    100032: Plane014
+    100034: Plawne002
+    100036: Plawne003
+    100038: Plawne004
+    100040: Plawne005
+    100042: Plawne006
+    100044: Plawne007
+    100046: Plawne008
+    400000: Box011
+    400002: Box017
+    400004: Box018
+    400006: Box019
+    400008: Box020
+    400010: Box021
+    400012: Box022
+    400014: Box023
+    400016: Cylinder005
+    400018: Cylinder013
+    400020: Cylinder014
+    400022: Cylinder015
+    400024: Cylinder016
+    400026: Cylinder017
+    400028: Cylinder018
+    400030: //RootNode
+    400032: Plane014
+    400034: Plawne002
+    400036: Plawne003
+    400038: Plawne004
+    400040: Plawne005
+    400042: Plawne006
+    400044: Plawne007
+    400046: Plawne008
+    2100000: Box011Mat
+    2100002: Box017Mat
+    2100004: Box018Mat
+    2100006: Box019Mat
+    2100008: Box020Mat
+    2100010: Box021Mat
+    2100012: Box022Mat
+    2100014: Box023Mat
+    2100016: Cylinder005Mat
+    2100018: Cylinder013Mat
+    2100020: Cylinder014Mat
+    2100022: Cylinder015Mat
+    2100024: Cylinder016Mat
+    2100026: Cylinder017Mat
+    2100028: Cylinder018Mat
+    2100030: Plane014Mat
+    2100032: Plawne002Mat
+    2100034: Plawne003Mat
+    2100036: Plawne004Mat
+    2100038: Plawne005Mat
+    2100040: Plawne006Mat
+    2100042: Plawne007Mat
+    2100044: Plawne008Mat
+    2300000: Box011
+    2300002: Box017
+    2300004: Box018
+    2300006: Box019
+    2300008: Box020
+    2300010: Box021
+    2300012: Box022
+    2300014: Box023
+    2300016: Cylinder005
+    2300018: Cylinder013
+    2300020: Cylinder014
+    2300022: Cylinder015
+    2300024: Cylinder016
+    2300026: Cylinder017
+    2300028: Cylinder018
+    2300030: Plane014
+    2300032: Plawne002
+    2300034: Plawne003
+    2300036: Plawne004
+    2300038: Plawne005
+    2300040: Plawne006
+    2300042: Plawne007
+    2300044: Plawne008
+    3300000: Box011
+    3300002: Box017
+    3300004: Box018
+    3300006: Box019
+    3300008: Box020
+    3300010: Box021
+    3300012: Box022
+    3300014: Box023
+    3300016: Cylinder005
+    3300018: Cylinder013
+    3300020: Cylinder014
+    3300022: Cylinder015
+    3300024: Cylinder016
+    3300026: Cylinder017
+    3300028: Cylinder018
+    3300030: Plane014
+    3300032: Plawne002
+    3300034: Plawne003
+    3300036: Plawne004
+    3300038: Plawne005
+    3300040: Plawne006
+    3300042: Plawne007
+    3300044: Plawne008
+    4300000: Box011
+    4300002: Box017
+    4300004: Box018
+    4300006: Box019
+    4300008: Box020
+    4300010: Box021
+    4300012: Box022
+    4300014: Box023
+    4300016: Cylinder005
+    4300018: Cylinder013
+    4300020: Cylinder014
+    4300022: Cylinder015
+    4300024: Cylinder016
+    4300026: Cylinder017
+    4300028: Cylinder018
+    4300030: Plane014
+    4300032: Plawne002
+    4300034: Plawne003
+    4300036: Plawne004
+    4300038: Plawne005
+    4300040: Plawne006
+    4300042: Plawne007
+    4300044: Plawne008
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box011Mat
+    second: {fileID: 2100000, guid: ea479559e15da394599c4b8e493b4758, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box017Mat
+    second: {fileID: 2100000, guid: cf306dc2b43fa874a99efe5b7e73ce50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box018Mat
+    second: {fileID: 2100000, guid: bfe0881e38e94bb43bce1926a86534cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box019Mat
+    second: {fileID: 2100000, guid: 187214957ee0b344a88ce2d9d180cb96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box020Mat
+    second: {fileID: 2100000, guid: e5f76fa427ad7ba4998e3abd68164038, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box021Mat
+    second: {fileID: 2100000, guid: 0d1fe72196db716468180d9cd5658460, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box022Mat
+    second: {fileID: 2100000, guid: e1a547aaac2f81e4dbc8005027e9a9e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box023Mat
+    second: {fileID: 2100000, guid: 5b95364ce54ebc64cb95e1134842dea9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder005Mat
+    second: {fileID: 2100000, guid: 88afe441a67d3964bbd206335a3e9813, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder013Mat
+    second: {fileID: 2100000, guid: c085d55078af2df419c443eff2a2a9cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder014Mat
+    second: {fileID: 2100000, guid: 83bb4b8b4277e1644a9f63ecc668f73a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder015Mat
+    second: {fileID: 2100000, guid: f5cbfbe1d2ce6b04e8f609250291b6d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder016Mat
+    second: {fileID: 2100000, guid: 7ef70ebac4e2722429a528fa444ff872, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder017Mat
+    second: {fileID: 2100000, guid: 13d6b85f0d98eb7498097907b7a3e18e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder018Mat
+    second: {fileID: 2100000, guid: 4a7ec8603296388499ef419779bc9aa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plane014Mat
+    second: {fileID: 2100000, guid: 46bae1ba571ed954f96e9bc6bb5357ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plawne002Mat
+    second: {fileID: 2100000, guid: c6561d938bb49fb449e242249fefb3de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plawne003Mat
+    second: {fileID: 2100000, guid: 6308b13be90730543b66f17d4bda2751, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plawne004Mat
+    second: {fileID: 2100000, guid: 489ff7501ab15a54a8b8871acb3b0cd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plawne005Mat
+    second: {fileID: 2100000, guid: a2b7cb3870d0d964885c9ac2918efb91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plawne006Mat
+    second: {fileID: 2100000, guid: 244305fb9cdcee84199ec5e0766e9c77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plawne007Mat
+    second: {fileID: 2100000, guid: a5bc4732d9c2a594cb48d9a807651402, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plawne008Mat
+    second: {fileID: 2100000, guid: 0944a25d73050b84db61ff7b9e5257e2, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

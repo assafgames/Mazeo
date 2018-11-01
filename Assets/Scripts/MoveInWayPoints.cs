@@ -12,6 +12,7 @@ public class MoveInWayPoints : MonoBehaviour {
 	private Vector3 nextPoint;
 	private int nextPointIndex = 0;
 	public bool stoped = false;
+	public float gizmoSize = 1;
 
 	void Start () {
 		// add current pos as first
@@ -57,7 +58,7 @@ public class MoveInWayPoints : MonoBehaviour {
 	private void OnDrawGizmos () {
 		Gizmos.color = pathColor;
 		foreach (Vector3 pos in wayPoints) {
-			Gizmos.DrawCube (pos, Vector3.one);
+			Gizmos.DrawCube (pos, Vector3.one * gizmoSize);
 		}
 	}
 }

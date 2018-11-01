@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
 	private Health health;
 	private PlayerMovment playerMovment;
 	private PlayerShooter playerShooter;
-
+	
 	void Start () {
 		health = GetComponent<Health>();
 		health.OnDie += PlayerDie;

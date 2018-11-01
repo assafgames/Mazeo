@@ -321,8 +321,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1856901203920376}
-  m_LocalRotation: {x: -0, y: -0.6796579, z: -0, w: 0.73352927}
-  m_LocalPosition: {x: -20.73, y: 2.02, z: -2.27}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.7, y: 98.8, z: -134.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4829552777864014}
@@ -331,7 +331,7 @@ Transform:
   - {fileID: 4623181553639186}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -85.634, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4050574000377376
 Transform:
   m_ObjectHideFlags: 1
@@ -616,10 +616,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 5350d8c2df27bcd4196c00c341e32c50, type: 3}
-  - {fileID: 2100002, guid: 5350d8c2df27bcd4196c00c341e32c50, type: 3}
-  - {fileID: 2100004, guid: 5350d8c2df27bcd4196c00c341e32c50, type: 3}
-  - {fileID: 2100006, guid: 5350d8c2df27bcd4196c00c341e32c50, type: 3}
+  - {fileID: 2100000, guid: 1a4dde9ddd7896f42a82bf7ef47ae382, type: 2}
+  - {fileID: 2100000, guid: 83fc13c793390124abb3c48ae4292a49, type: 2}
+  - {fileID: 2100000, guid: 2ef9cae403b438a4a88464d485a344c7, type: 2}
+  - {fileID: 2100000, guid: 9768302bdd997254aa34df42c1869e9e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -850,18 +850,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69a34f710d96f34d9183d995eae5c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
-  - {x: 45, y: 0, z: 121.49}
-  - {x: 45, y: 17.23, z: 125.9}
-  - {x: 45, y: 36.45, z: 99.88}
-  - {x: 30.5, y: 0, z: 91.3}
-  - {x: 59.1, y: 16.1, z: 87.8}
-  - {x: 59.64, y: 9.94, z: 109.11}
+  wayPoints: []
   pathColor: {r: 0.6725921, g: 1, b: 0.39999998, a: 1}
   speed: 2
   target: {fileID: 0}
   attackRadius: 30
   stoped: 0
+  gizmoSize: 1
 --- !u!114 &114367602946195190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -890,9 +885,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthLevel: 100
+  maxHealthLevel: 100
+  healthIndicator: {fileID: 0}
   dieBoom: {fileID: 1832324401625814}
   hitBoom: {fileID: 1648393440326102}
   modelToHideOnDie: {fileID: 1847386223657838}
+  canRevive: 0
 --- !u!198 &198387758602198654
 ParticleSystem:
   m_ObjectHideFlags: 1
