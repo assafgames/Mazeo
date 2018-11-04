@@ -7,8 +7,8 @@ public class MoveInWayPoints : MonoBehaviour {
 	public List<Vector3> wayPoints = new List<Vector3> ();
 	public Color pathColor = Color.red;
 	public float speed = 0.5f;
-	public GameObject target;
-	public float attackRadius = 5;
+	public GameObject target = null;
+	public float attackRadius = 50;
 	private Vector3 nextPoint;
 	private int nextPointIndex = 0;
 	public bool stoped = false;
@@ -18,6 +18,10 @@ public class MoveInWayPoints : MonoBehaviour {
 		// add current pos as first
 		nextPoint = transform.position;
 		wayPoints.Insert (0, nextPoint);
+		// get player ref as default
+		if(target==null){
+            target = GameObject.FindWithTag("Player");
+		}
 	}
 
 	void Update () {

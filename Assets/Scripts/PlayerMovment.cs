@@ -11,7 +11,7 @@ public class PlayerMovment : MonoBehaviour, IStopable {
 	public float clampAngle = 60.0f;
 	public GameObject ship;
 	public float smoothTime = 0.3F;
-	public float maxTurnAngle = 20.0F;
+	public float maxTurnAngle = 30.0F;
 	private float turnVelocity = 0.0F;
 	private float xTurn = 0.0F;
 	private Rigidbody rb;

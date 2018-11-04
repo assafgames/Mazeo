@@ -159,8 +159,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1017231700428420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.39396, y: 6.472932, z: -5.721059}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -99.6, y: 119.9, z: -5.721059}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4018034528593844}
   - {fileID: 4526892378545914}
@@ -251,9 +251,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthLevel: 10
+  maxHealthLevel: 100
+  healthIndicator: {fileID: 0}
   dieBoom: {fileID: 1755050240742750}
   hitBoom: {fileID: 0}
   modelToHideOnDie: {fileID: 1425668837093468}
+  canRevive: 0
 --- !u!114 &114394257417830978
 MonoBehaviour:
   m_ObjectHideFlags: 1

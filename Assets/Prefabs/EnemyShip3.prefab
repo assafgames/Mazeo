@@ -254,8 +254,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156988456857410}
-  m_LocalRotation: {x: 0.078198016, y: 0.47425684, z: -0.1424926, w: 0.86525226}
-  m_LocalPosition: {x: -16.33, y: 99.57, z: -9.52}
+  m_LocalRotation: {x: 0.15514427, y: 0.44477102, z: -0.00084413745, w: 0.88210446}
+  m_LocalPosition: {x: -18.7, y: 99.79, z: -20.94}
   m_LocalScale: {x: 1.0000002, y: 0.9999999, z: 1.0000002}
   m_Children:
   - {fileID: 4018147998425114}
@@ -264,7 +264,7 @@ Transform:
   - {fileID: 4597220952246214}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 15.693001, y: 56.030003, z: -10.317}
+  m_LocalEulerAnglesHint: {x: 15.93, y: 54.660004, z: 8.162001}
 --- !u!4 &4597220952246214
 Transform:
   m_ObjectHideFlags: 1
@@ -386,10 +386,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56eb0dc092a6c0545a9b1a594937e03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthLevel: 100
+  healthLevel: 20
+  maxHealthLevel: 20
+  healthIndicator: {fileID: 0}
   dieBoom: {fileID: 1402932450547460}
   hitBoom: {fileID: 1187281969559884}
   modelToHideOnDie: {fileID: 1235794656041310}
+  canRevive: 0
 --- !u!114 &114806211833808288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -423,6 +426,7 @@ MonoBehaviour:
   target: {fileID: 0}
   attackRadius: 35
   stoped: 0
+  gizmoSize: 1
 --- !u!198 &198089293536151636
 ParticleSystem:
   m_ObjectHideFlags: 1
