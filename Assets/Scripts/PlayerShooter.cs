@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooter : BaseShooter, IStopable  {
+public class PlayerShooter : BaseShooter, IStopable {
 
 	public GameObject bulletPrefab;
+	public GameObject misilePrefab;
 	public Transform bulletSpawn;
 	public float forwardSpeed = 100;
 	public float fireSpeed = 20;
@@ -13,7 +14,7 @@ public class PlayerShooter : BaseShooter, IStopable  {
 
 	private bool allowfire = true;
 
-   	private bool stoped = false;
+	private bool stoped = false;
 	public bool Stoped {
 		get {
 			return stoped;
@@ -28,9 +29,13 @@ public class PlayerShooter : BaseShooter, IStopable  {
 		this.stoped = true;
 	}
 
-    private void Update () {
+	private void Update () {
 		if (Input.GetMouseButton (0) && allowfire) {
 			StartCoroutine (Fire ());
+		}
+
+		if (Input.GetMouseButtonDown (1) && allowfire) {
+			FireMisile ();
 		}
 	}
 
@@ -49,6 +54,28 @@ public class PlayerShooter : BaseShooter, IStopable  {
 
 		yield return new WaitForSeconds (fireRateInSeconds);
 		allowfire = true;
+	}
+
+	private void FireMisile () {
+
+		RaycastHit hit;
+		var ray = mainCam.ScreenPointToRay (new Vector3 (Screen.width / 2, Screen.height / 2, 0));
+		if (Physics.Raycast (ray, out hit)) {
+
+			// Create the Bullet from the Bullet Prefab
+			var misile = (GameObject) Instantiate (
+				misilePrefab,
+				bulletSpawn.position,
+				bulletSpawn.rotation);
+
+			if (hit.transform.tag == "Enemy") {
+				misile.GetComponent<Misile> ().Fire (hit.transform);
+			} else {
+				misile.GetComponent<Misile> ().Fire (hit.point);
+			}
+
+		}
+
 	}
 
 }
