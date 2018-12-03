@@ -7,11 +7,11 @@ public class PlayerShooter : BaseShooter, IStopable {
 	public GameObject bulletPrefab;
 	public GameObject misilePrefab;
 	public Transform bulletSpawn;
-	public float forwardSpeed = 100;
 	public float fireSpeed = 20;
 	public float fireRateInSeconds = 0.1f;
 	public Camera mainCam;
-
+	public UImanager uImanager;
+	private int numberOfMissiles = 0;
 	private bool allowfire = true;
 
 	private bool stoped = false;
@@ -50,7 +50,7 @@ public class PlayerShooter : BaseShooter, IStopable {
 
 		// Add velocity to the bullet
 		var ray = mainCam.ScreenPointToRay (new Vector3 (Screen.width / 2, Screen.height / 2, 0));
-		bullet.GetComponent<Rigidbody> ().velocity = ray.direction * (forwardSpeed + fireSpeed);
+		bullet.GetComponent<Rigidbody> ().velocity = ray.direction * (fireSpeed);
 
 		yield return new WaitForSeconds (fireRateInSeconds);
 		allowfire = true;
@@ -58,6 +58,12 @@ public class PlayerShooter : BaseShooter, IStopable {
 
 	private void FireMisile () {
 
+		if (numberOfMissiles == 0) {
+			return;
+		}
+
+		numberOfMissiles--;
+		uImanager.SetNumerOfSecondaryWeapon(numberOfMissiles);
 		RaycastHit hit;
 		var ray = mainCam.ScreenPointToRay (new Vector3 (Screen.width / 2, Screen.height / 2, 0));
 		if (Physics.Raycast (ray, out hit)) {
@@ -76,6 +82,11 @@ public class PlayerShooter : BaseShooter, IStopable {
 
 		}
 
+	}
+
+	public void SetNumberOfMissiles (int numberOfMissilesToSet) {
+		numberOfMissiles = numberOfMissilesToSet;
+		uImanager.SetNumerOfSecondaryWeapon(numberOfMissiles);
 	}
 
 }
