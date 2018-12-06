@@ -176,6 +176,9 @@ MonoBehaviour:
   boomObj: {fileID: 1788790082730250}
   ownerTag: Player
   damage: 10
+  damageRadius: 0
+  speed: 35
+  followTarget: 0
 --- !u!135 &135393609902384604
 SphereCollider:
   m_ObjectHideFlags: 1

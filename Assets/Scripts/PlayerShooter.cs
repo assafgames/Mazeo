@@ -7,7 +7,6 @@ public class PlayerShooter : BaseShooter, IStopable {
 	public GameObject bulletPrefab;
 	public GameObject misilePrefab;
 	public Transform bulletSpawn;
-	public float fireSpeed = 20;
 	public float fireRateInSeconds = 0.1f;
 	public Camera mainCam;
 	public UImanager uImanager;
@@ -31,32 +30,32 @@ public class PlayerShooter : BaseShooter, IStopable {
 
 	private void Update () {
 		if (Input.GetMouseButton (0) && allowfire) {
-			StartCoroutine (Fire ());
+			StartCoroutine (FirePrimaryBullet ());
 		}
 
 		if (Input.GetMouseButtonDown (1) && allowfire) {
-			FireMisile ();
+			FireSecondaryBullet ();
 		}
 	}
 
-	IEnumerator Fire () {
+	IEnumerator FirePrimaryBullet () {
 		allowfire = false;
 
 		// Create the Bullet from the Bullet Prefab
-		var bullet = (GameObject) Instantiate (
+		var primaryBullet = (GameObject) Instantiate (
 			bulletPrefab,
 			bulletSpawn.position,
 			bulletSpawn.rotation);
 
 		// Add velocity to the bullet
 		var ray = mainCam.ScreenPointToRay (new Vector3 (Screen.width / 2, Screen.height / 2, 0));
-		bullet.GetComponent<Rigidbody> ().velocity = ray.direction * (fireSpeed);
+		primaryBullet.GetComponent<Bullet>().Fire(ray);
 
 		yield return new WaitForSeconds (fireRateInSeconds);
 		allowfire = true;
 	}
 
-	private void FireMisile () {
+	private void FireSecondaryBullet () {
 
 		if (numberOfMissiles == 0) {
 			return;
@@ -69,15 +68,20 @@ public class PlayerShooter : BaseShooter, IStopable {
 		if (Physics.Raycast (ray, out hit)) {
 
 			// Create the Bullet from the Bullet Prefab
-			var misile = (GameObject) Instantiate (
+			var secondaryBullet = (GameObject) Instantiate (
 				misilePrefab,
 				bulletSpawn.position,
 				bulletSpawn.rotation);
 
+			Bullet misile = secondaryBullet.GetComponent<Bullet> ();
+			if(misile == null){
+				return;
+			}
+
 			if (hit.transform.tag == "Enemy") {
-				misile.GetComponent<Misile> ().Fire (hit.transform);
+				misile.Fire (hit.transform);
 			} else {
-				misile.GetComponent<Misile> ().Fire (hit.point);
+				misile.Fire (hit.point);
 			}
 
 		}

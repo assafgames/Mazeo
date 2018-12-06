@@ -69,7 +69,6 @@
      <Compile Include="Assets\Scripts\HealthBox.cs" />
      <Compile Include="Assets\Scripts\HealthIndicator.cs" />
      <Compile Include="Assets\Scripts\IStopable.cs" />
-     <Compile Include="Assets\Scripts\Misile.cs" />
      <Compile Include="Assets\Scripts\MissileBox.cs" />
      <Compile Include="Assets\Scripts\MoveInWayPoints.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
