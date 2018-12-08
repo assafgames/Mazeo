@@ -6,36 +6,39 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
 	public UImanager uImanager;
-	public List<EnergyCube> healthBoxs = new List<EnergyCube>();
+	public List<EnergyCube> healthBoxs = new List<EnergyCube> ();
 	private int numberOfEnergyCubes = 0;
 
-	private void Start() {
+	private void Start () {
 
-		numberOfEnergyCubes = healthBoxs.Count;
-
-		uImanager.SetNumerOfEnergyBoxes(numberOfEnergyCubes);
-
-		foreach (EnergyCube energyCube in healthBoxs)
-		{
-			energyCube.OnExpload += ReduceEnergyCube;
+		if (uImanager) {
+			numberOfEnergyCubes = healthBoxs.Count;
+			uImanager.SetNumerOfEnergyBoxes (numberOfEnergyCubes);
+			foreach (EnergyCube energyCube in healthBoxs) {
+				energyCube.OnExpload += ReduceEnergyCube;
+			}
 		}
 	}
 
-	private void ReduceEnergyCube(){
+	private void ReduceEnergyCube () {
 		numberOfEnergyCubes--;
-		uImanager.SetNumerOfEnergyBoxes(numberOfEnergyCubes);
-		if(numberOfEnergyCubes < 1){
-			GoToNextLevel();
+		uImanager.SetNumerOfEnergyBoxes (numberOfEnergyCubes);
+		if (numberOfEnergyCubes < 1) {
+			GoToNextLevel ();
 		}
 	}
 
-	public void GoToMenu(){
-		print("GOTO MENU LEVEL !!!");
-		//SceneManager.LoadScene(0);
+	public void GoToMenu () {
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
+		GoToLevel(0);
 	}
 
-	public void GoToNextLevel(){
-		print("LEVEL COMPLEATED !!!");
-		//SceneManager.LoadScene(0);
+	public void GoToNextLevel () {
+		GoToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+	}
+
+	public void GoToLevel (int level) {
+		SceneManager.LoadScene (level);
 	}
 }
