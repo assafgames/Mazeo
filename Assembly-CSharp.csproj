@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Burners.cs" />
      <Compile Include="Assets\Scripts\EnemyShooter.cs" />
      <Compile Include="Assets\Scripts\EnergyCube.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\HealthBox.cs" />
      <Compile Include="Assets\Scripts\HealthIndicator.cs" />

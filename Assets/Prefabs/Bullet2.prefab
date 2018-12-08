@@ -177,8 +177,7 @@ MonoBehaviour:
   ownerTag: Player
   damage: 10
   damageRadius: 0
-  speed: 35
-  followTarget: 0
+  speed: 50
 --- !u!135 &135393609902384604
 SphereCollider:
   m_ObjectHideFlags: 1

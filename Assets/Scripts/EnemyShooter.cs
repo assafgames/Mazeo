@@ -14,9 +14,10 @@ public class EnemyShooter : BaseShooter {
 
 	public void Shoot (Transform target) {
 		if (Time.time > fireRate + lastShot) {
-			var bullet = (GameObject) Instantiate (bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
-			bullet.GetComponent<Bullet> ().ownerTag = "Enemy";
-			bullet.GetComponent<Rigidbody> ().velocity = transform.forward * fireSpeed ;
+			var bulletInstanse = (GameObject) Instantiate (bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+			Bullet bullet = bulletInstanse.GetComponent<Bullet> ();
+			bullet.ownerTag = "Enemy";
+			bullet.FireToDirection(transform.forward);
 			lastShot = Time.time;
 		}
 	}

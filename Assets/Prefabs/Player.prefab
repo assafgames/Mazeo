@@ -915,7 +915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1053396496268820, guid: 4f2f40cf2cfcd284795c83fc1f5de09e,
     type: 2}
-  misilePrefab: {fileID: 1319963460230710, guid: 07e8fe9f7a161b14cb3e8175578f3729,
+  misilePrefab: {fileID: 1310842719104554, guid: d17b76c46303cef44b4f2533f3df2122,
     type: 2}
   bulletSpawn: {fileID: 4284157855480296}
   fireRateInSeconds: 0.1

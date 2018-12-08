@@ -8,48 +8,50 @@ public class Bullet : MonoBehaviour {
 	public string ownerTag = "Player";
 	public int damage = 10;
 	public float damageRadius = 0;
-	private Transform target = null;
-	private Vector3 pointToHit = Vector3.zero;
 	public float speed = 1;
+	public bool guided = false;
+	private Transform target = null;
+	private Vector3 targetPosition = Vector3.zero;
 	/* Represents the homing sensitivity of the missile.
 Range [0.0,1.0] where 0 will disable homing and 1 will make it follow the target like crazy.
 This param is fed into the Slerp (defines the interpolation point to pick) */
-	float homingSensitivity = 0.2f;
-	public bool followTarget = false;
+	private float homingSensitivity = 0.2f;
+	private bool followTarget = false;
 
 	private void Start () {
 		Destroy (this.gameObject, 20.0f);
 	}
 
 	void Update () {
+
 		if (followTarget) {
-
 			if (target != null) {
-				Vector3 relativePos = target.position - transform.position;
-				Quaternion rotation = Quaternion.LookRotation (relativePos);
-				transform.rotation = Quaternion.Slerp (transform.rotation, rotation, homingSensitivity);
-			} else {
-				transform.LookAt (pointToHit);
+				this.targetPosition = target.position;
 			}
-
+			Vector3 relativePos = this.targetPosition - transform.position;
+			Quaternion rotation = Quaternion.LookRotation (relativePos);
+			transform.rotation = Quaternion.Slerp (transform.rotation, rotation, homingSensitivity);
+			transform.LookAt (this.targetPosition);
 			transform.Translate (0, 0, speed * Time.deltaTime, Space.Self);
 		}
 
 	}
 
-	// fire bullet at a given ray
-	public void Fire (Ray ray) {
-		GetComponent<Rigidbody> ().velocity = ray.direction * (speed);
+	// fire bullet at a given direction
+	public void FireToDirection (Vector3 direction) {
+		followTarget = false;
+		GetComponent<Rigidbody> ().velocity = direction * (speed);
 	}
 
 	// follow bullet to a target
-	public void Fire (Transform target) {
+	public void FireAtTarget (Transform target) {
+		followTarget = true;
 		this.target = target;
 	}
 
-	// fire at a target point
-	public void Fire (Vector3 target) {
-		this.pointToHit = target;
+	public void FireAtTarget (Vector3 target) {
+		followTarget = true;
+		this.targetPosition = target;
 	}
 
 	// bullet collide
@@ -73,9 +75,12 @@ This param is fed into the Slerp (defines the interpolation point to pick) */
 			Collider[] hitColliders = Physics.OverlapSphere (other.gameObject.transform.position, damageRadius);
 
 			for (int i = 0; i < hitColliders.Length; i++) {
-				Health enemyInRadius = hitColliders[i].gameObject.gameObject.GetComponent<Health> ();
-				if (enemyInRadius != null) {
-					enemyInRadius.Hit (damage, transform.position);
+				GameObject objectInRadius = hitColliders[i].gameObject;
+				if (objectInRadius.tag == "Enemy") {
+					Health enemyInRadius = objectInRadius.GetComponent<Health> ();
+					if (enemyInRadius != null) {
+						enemyInRadius.Hit (damage, transform.position);
+					}
 				}
 			}
 		}

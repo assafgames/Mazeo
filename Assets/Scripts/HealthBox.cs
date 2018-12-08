@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthBox : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class HealthBox : MonoBehaviour {
 			if (health != null) {
 				health.Revive ();
 			}
+			
 			Destroy (this.gameObject, 0.1f);
 		}
 

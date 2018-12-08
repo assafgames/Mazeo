@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 136233740635592124}
   m_Layer: 0
   m_Name: Misile2
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   damage: 100
   damageRadius: 0
   speed: 20
-  followTarget: 1
+  guided: 1
 --- !u!136 &136233740635592124
 CapsuleCollider:
   m_ObjectHideFlags: 1

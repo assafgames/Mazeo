@@ -49,7 +49,7 @@ public class PlayerShooter : BaseShooter, IStopable {
 
 		// Add velocity to the bullet
 		var ray = mainCam.ScreenPointToRay (new Vector3 (Screen.width / 2, Screen.height / 2, 0));
-		primaryBullet.GetComponent<Bullet>().Fire(ray);
+		primaryBullet.GetComponent<Bullet> ().FireToDirection (ray.direction);
 
 		yield return new WaitForSeconds (fireRateInSeconds);
 		allowfire = true;
@@ -62,7 +62,7 @@ public class PlayerShooter : BaseShooter, IStopable {
 		}
 
 		numberOfMissiles--;
-		uImanager.SetNumerOfSecondaryWeapon(numberOfMissiles);
+		uImanager.SetNumerOfSecondaryWeapon (numberOfMissiles);
 		RaycastHit hit;
 		var ray = mainCam.ScreenPointToRay (new Vector3 (Screen.width / 2, Screen.height / 2, 0));
 		if (Physics.Raycast (ray, out hit)) {
@@ -74,23 +74,19 @@ public class PlayerShooter : BaseShooter, IStopable {
 				bulletSpawn.rotation);
 
 			Bullet misile = secondaryBullet.GetComponent<Bullet> ();
-			if(misile == null){
-				return;
-			}
 
-			if (hit.transform.tag == "Enemy") {
-				misile.Fire (hit.transform);
+			if (hit.transform.tag == "Enemy" && misile.guided) {
+				misile.FireAtTarget (hit.transform);
 			} else {
-				misile.Fire (hit.point);
+				misile.FireToDirection ((hit.point - misile.transform.position).normalized);
 			}
-
 		}
 
 	}
 
 	public void SetNumberOfMissiles (int numberOfMissilesToSet) {
 		numberOfMissiles = numberOfMissilesToSet;
-		uImanager.SetNumerOfSecondaryWeapon(numberOfMissiles);
+		uImanager.SetNumerOfSecondaryWeapon (numberOfMissiles);
 	}
 
 }

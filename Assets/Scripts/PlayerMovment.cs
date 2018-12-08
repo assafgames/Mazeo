@@ -46,7 +46,7 @@ public class PlayerMovment : MonoBehaviour, IStopable {
 		bool up = Input.GetKey(KeyCode.E);
 		bool down = Input.GetKey(KeyCode.C);
 		bool boost = Input.GetKey(KeyCode.LeftShift);
-print(boost);
+
 		int xMultiplayer = -1;
 
 		float forwardSpeed = vertical * moveSpeed * Time.deltaTime;
