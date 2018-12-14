@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65114458939795326}
   - component: {fileID: 54619828920083966}
   m_Layer: 0
-  m_Name: MissileBox
+  m_Name: MissileBox2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

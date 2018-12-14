@@ -85,7 +85,7 @@ This param is fed into the Slerp (defines the interpolation point to pick) */
 			}
 		}
 
-		Destroy (this.gameObject, 0.1f);
+		Destroy (this.gameObject, 1f);
 	}
 
 }
