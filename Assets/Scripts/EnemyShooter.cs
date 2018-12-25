@@ -9,10 +9,30 @@ public class EnemyShooter : BaseShooter {
 	public Transform bulletSpawn;
 	public float fireSpeed = 10;
 	public float fireRate = 2f;
-
+	public GameObject target = null;
 	private float lastShot = 0.0f;
+	public GameObject weapon;
+	public float attackRadius = 50;
 
+	private void Start() {
+		if(weapon == null){
+			weapon = this.gameObject;
+		}
+
+		// get player ref as default
+		if(target==null){
+			target = GameObject.FindWithTag("Player");
+		}
+	}
+
+	private void Update() {
+		if (Vector3.Distance (transform.position, target.transform.position) < attackRadius) {
+			weapon.transform.LookAt (target.transform,Vector3.right);
+			Shoot(target.transform);
+		}
+	}
 	public void Shoot (Transform target) {
+		
 		if (Time.time > fireRate + lastShot) {
 			var bulletInstanse = (GameObject) Instantiate (bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
 			Bullet bullet = bulletInstanse.GetComponent<Bullet> ();

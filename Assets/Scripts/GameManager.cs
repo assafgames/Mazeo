@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
 	private void Start () {
 
 		if (uImanager) {
+			healthBoxs = new List<EnergyCube> (FindObjectsOfType<EnergyCube>()) ;
 			numberOfEnergyCubes = healthBoxs.Count;
 			uImanager.SetNumerOfEnergyBoxes (numberOfEnergyCubes);
 			foreach (EnergyCube energyCube in healthBoxs) {
