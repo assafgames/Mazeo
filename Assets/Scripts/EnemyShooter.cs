@@ -14,30 +14,30 @@ public class EnemyShooter : BaseShooter {
 	public GameObject weapon;
 	public float attackRadius = 50;
 
-	private void Start() {
-		if(weapon == null){
+	private void Start () {
+		if (weapon == null) {
 			weapon = this.gameObject;
 		}
 
 		// get player ref as default
-		if(target==null){
-			target = GameObject.FindWithTag("Player");
+		if (target == null) {
+			target = GameObject.FindWithTag ("Player");
 		}
 	}
 
-	private void Update() {
+	private void Update () {
 		if (Vector3.Distance (transform.position, target.transform.position) < attackRadius) {
-			weapon.transform.LookAt (target.transform,Vector3.right);
-			Shoot(target.transform);
+			weapon.transform.LookAt (target.transform);
+			Shoot (target.transform);
 		}
 	}
 	public void Shoot (Transform target) {
-		
+
 		if (Time.time > fireRate + lastShot) {
 			var bulletInstanse = (GameObject) Instantiate (bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
 			Bullet bullet = bulletInstanse.GetComponent<Bullet> ();
 			bullet.ownerTag = "Enemy";
-			bullet.FireToDirection(transform.forward);
+			bullet.FireAtTarget(target.position);
 			lastShot = Time.time;
 		}
 	}
