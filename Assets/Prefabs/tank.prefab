@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114510930541600290}
   m_Layer: 0
   m_Name: tank
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,7 +214,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081391753713918}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 221.20866, y: 0.045933396, z: 259.22092}
+  m_LocalPosition: {x: 335.6, y: 0.045933396, z: 259.22092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4753117284104268}
@@ -229,8 +229,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1404517432001216}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.043335, y: 10.354066, z: 7.832123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4376263799950116}
@@ -286,7 +286,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1364123124045338}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 3.1, z: 4.58}
+  m_LocalPosition: {x: 0, y: 3.37, z: 6.57}
   m_LocalScale: {x: 100.00008, y: 100.00006, z: 100.00006}
   m_Children: []
   m_Father: {fileID: 4562333370739438}
@@ -488,8 +488,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.59, y: 3.78, z: 8.62}
-  m_Center: {x: 0, y: 2.11, z: 0.27}
+  m_Size: {x: 6.59, y: 3.78, z: 7.71}
+  m_Center: {x: 0, y: 2.11, z: -0.01}
 --- !u!114 &114510930541600290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -519,11 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69a34f710d96f34d9183d995eae5c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
-  - {x: 205.53, y: 0, z: 271.7}
-  - {x: 246.9, y: 0, z: 272.6}
-  - {x: 221.2087, y: 0, z: 290.2}
-  pathColor: {r: 1, g: 0, b: 0, a: 1}
+  wayPoints: []
+  pathColor: {r: 1, g: 0.042452812, b: 0.068696015, a: 1}
   speed: 0.5
   target: {fileID: 0}
   stoped: 0
@@ -542,11 +539,11 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1453045930943146, guid: 004f8ad3f6b273a48b14c9a2b35aef98,
     type: 2}
   bulletSpawn: {fileID: 4608287804064670}
-  fireSpeed: 10
-  fireRate: 2
+  fireSpeed: 70
+  fireRate: 0.5
   target: {fileID: 0}
   weapon: {fileID: 1663864764354824}
-  attackRadius: 50
+  attackRadius: 20
 --- !u!198 &198065286229904686
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -733,7 +730,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9811321, g: 0.97174054, b: 0.8006408, a: 0.2784314}
+      maxColor: {r: 1, g: 0.53792745, b: 0, a: 0.2784314}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -795,7 +792,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 1.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2

@@ -255,8 +255,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156988456857410}
   m_LocalRotation: {x: 0.15514427, y: 0.44477102, z: -0.00084413745, w: 0.88210446}
-  m_LocalPosition: {x: -18.7, y: 99.79, z: -20.94}
-  m_LocalScale: {x: 1.0000002, y: 0.9999999, z: 1.0000002}
+  m_LocalPosition: {x: -204.84518, y: 64.179855, z: -60.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4018147998425114}
   - {fileID: 4043085324480236}
@@ -286,7 +286,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260293953251770}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.071, y: 0.265, z: 1.644}
+  m_LocalPosition: {x: 0.07, y: 0.651, z: 2.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4018147998425114}
@@ -373,7 +373,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9, y: 1.24, z: 3.51}
+  m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0.12, z: 0.1}
 --- !u!114 &114420938583208222
 MonoBehaviour:
@@ -409,6 +409,9 @@ MonoBehaviour:
   bulletSpawn: {fileID: 4798168936462912}
   fireSpeed: 30
   fireRate: 0.7
+  target: {fileID: 0}
+  weapon: {fileID: 0}
+  attackRadius: 50
 --- !u!114 &114994932469397010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,7 +427,6 @@ MonoBehaviour:
   pathColor: {r: 0.39999998, g: 0.82560635, b: 1, a: 1}
   speed: 2
   target: {fileID: 0}
-  attackRadius: 35
   stoped: 0
   gizmoSize: 1
 --- !u!198 &198089293536151636

@@ -21,7 +21,7 @@ public class MoveInWayPoints : MonoBehaviour {
 		wayPoints.Insert (0, nextPoint);
 		enemyShooter = GetComponent<EnemyShooter> ();
 		// get player ref as default
-		if(target==null){
+		if(target == null){
             target = GameObject.FindWithTag("Player");
 		}
 	}

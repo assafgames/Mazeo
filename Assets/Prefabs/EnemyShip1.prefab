@@ -850,11 +850,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69a34f710d96f34d9183d995eae5c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints: []
-  pathColor: {r: 0.6725921, g: 1, b: 0.39999998, a: 1}
+  wayPoints:
+  - {x: -8.2, y: 100, z: -134}
+  - {x: 43.6, y: 100, z: -129.2}
+  - {x: 45.61, y: 98.9, z: -126.2}
+  pathColor: {r: 1, g: 0.84751457, b: 0, a: 1}
   speed: 2
   target: {fileID: 0}
-  attackRadius: 30
   stoped: 0
   gizmoSize: 1
 --- !u!114 &114367602946195190
@@ -873,6 +875,9 @@ MonoBehaviour:
   bulletSpawn: {fileID: 4569461975697832}
   fireSpeed: 40
   fireRate: 0.5
+  target: {fileID: 0}
+  weapon: {fileID: 1847386223657838}
+  attackRadius: 20
 --- !u!114 &114446747434544602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28188,7 +28193,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9811321, g: 0.97174054, b: 0.8006408, a: 0.2784314}
+      maxColor: {r: 1, g: 0.37272787, b: 0, a: 0.2509804}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -28250,7 +28255,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
