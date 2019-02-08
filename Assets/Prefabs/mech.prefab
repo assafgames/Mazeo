@@ -279,7 +279,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1580501243532510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 221.20866, y: 0.045933396, z: 248.09}
+  m_LocalPosition: {x: 221.20866, y: -0.5, z: 424.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4956394561413066}
@@ -428,13 +428,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPoints:
-  - {x: 221, y: 0, z: 267.3}
-  - {x: 221.65, y: 0, z: 225.8}
+  - {x: 198.8, y: -0.5, z: 466.9}
+  - {x: 261.3, y: -0.5, z: 466.9}
+  - {x: 261.3, y: -0.5, z: 403.5}
+  - {x: 196.6, y: -0.5, z: 403.5}
   pathColor: {r: 0.1782704, g: 1, b: 0.043137252, a: 1}
   speed: 0.5
   target: {fileID: 0}
+  lookAtNextPoint: 1
   stoped: 0
-  gizmoSize: 1
+  gizmoSize: 3
 --- !u!114 &114610226626036838
 MonoBehaviour:
   m_ObjectHideFlags: 1

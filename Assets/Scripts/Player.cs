@@ -17,8 +17,12 @@ public class Player : MonoBehaviour {
 	}
 
 	void PlayerDie () {
+		StopPlayer();
+		gameManager.GoToMenu();
+	}
+
+	public void StopPlayer () {
 		playerMovment.Stop();
 		playerShooter.Stop();
-		gameManager.GoToMenu();
 	}
 }

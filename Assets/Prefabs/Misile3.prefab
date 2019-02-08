@@ -434,7 +434,7 @@ MonoBehaviour:
   ownerTag: Player
   damage: 100
   damageRadius: 30
-  speed: 20
+  speed: 40
   guided: 0
 --- !u!136 &136189535738851586
 CapsuleCollider:

@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class EnemyShooter : BaseShooter {
 
-	public GameObject bulletPrefab;
-	public Transform bulletSpawn;
 	public float fireSpeed = 10;
 	public float fireRate = 2f;
 	public GameObject target = null;

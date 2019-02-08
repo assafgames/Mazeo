@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlayerShooter : BaseShooter, IStopable {
 
-	public GameObject bulletPrefab;
 	public GameObject misilePrefab;
-	public Transform bulletSpawn;
+	
 	public float fireRateInSeconds = 0.1f;
 	public Camera mainCam;
 	public UImanager uImanager;
@@ -29,6 +28,10 @@ public class PlayerShooter : BaseShooter, IStopable {
 	}
 
 	private void Update () {
+		if(stoped){
+			return;
+		}
+		
 		if (Input.GetMouseButton (0) && allowfire) {
 			StartCoroutine (FirePrimaryBullet ());
 		}

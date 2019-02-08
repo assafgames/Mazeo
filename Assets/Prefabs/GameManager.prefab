@@ -53,3 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uImanager: {fileID: 0}
   healthBoxs: []
+  playerCamera: {fileID: 0}

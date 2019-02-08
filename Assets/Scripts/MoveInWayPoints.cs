@@ -8,30 +8,32 @@ public class MoveInWayPoints : MonoBehaviour {
 	public Color pathColor = Color.red;
 	public float speed = 0.5f;
 	public GameObject target = null;
-	
+	public bool lookAtNextPoint = true;
 	private Vector3 nextPoint;
 	private int nextPointIndex = 0;
 	public bool stoped = false;
 	public float gizmoSize = 1;
 	private EnemyShooter enemyShooter;
-	
+
 	void Start () {
 		// add current pos as first
-		nextPoint = transform.position;
-		wayPoints.Insert (0, nextPoint);
+		wayPoints.Insert (0, transform.position);
+		nextPoint = wayPoints[wayPoints.Count - 1];
+		
 		enemyShooter = GetComponent<EnemyShooter> ();
 		// get player ref as default
-		if(target == null){
-            target = GameObject.FindWithTag("Player");
+		if (target == null) {
+			target = GameObject.FindWithTag ("Player");
 		}
 	}
 
 	void Update () {
-		if(stoped){
+
+		if (stoped) {
 			return;
 		}
-		// go after player if needed
-		if (Vector3.Distance (transform.position, target.transform.position) > enemyShooter.attackRadius) {
+
+		if (lookAtNextPoint && enemyShooter != null && Vector3.Distance (transform.position, target.transform.position) > enemyShooter.attackRadius) {
 			transform.LookAt (nextPoint);
 			transform.position = Vector3.Lerp (transform.position, nextPoint, speed * Time.deltaTime);
 		}

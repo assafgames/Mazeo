@@ -7,12 +7,23 @@ public class GameManager : MonoBehaviour {
 
 	public UImanager uImanager;
 	public List<EnergyCube> healthBoxs = new List<EnergyCube> ();
+	public PlayerCamera playerCamera;
 	private int numberOfEnergyCubes = 0;
+	public Player player;
+
+	public int CurrentLevel {
+		get {
+			return PlayerPrefs.GetInt ("CURRENT_LEVEL");
+		}
+
+		set {
+			PlayerPrefs.SetInt ("CURRENT_LEVEL", value);
+		}
+	}
 
 	private void Start () {
-
 		if (uImanager) {
-			healthBoxs = new List<EnergyCube> (FindObjectsOfType<EnergyCube>()) ;
+			healthBoxs = new List<EnergyCube> (FindObjectsOfType<EnergyCube> ());
 			numberOfEnergyCubes = healthBoxs.Count;
 			uImanager.SetNumerOfEnergyBoxes (numberOfEnergyCubes);
 			foreach (EnergyCube energyCube in healthBoxs) {
@@ -25,21 +36,38 @@ public class GameManager : MonoBehaviour {
 		numberOfEnergyCubes--;
 		uImanager.SetNumerOfEnergyBoxes (numberOfEnergyCubes);
 		if (numberOfEnergyCubes < 1) {
-			GoToNextLevel ();
+			ShowNextLevel(2);
 		}
 	}
 
+	public void PlayerDied () {
+		GoToMenu ();
+	}
+
 	public void GoToMenu () {
-		Cursor.visible = true;
-		Cursor.lockState = CursorLockMode.None;
-		GoToLevel(0);
+		GoToLevel (0);
 	}
 
 	public void GoToNextLevel () {
-		GoToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+		GoToLevel (CurrentLevel + 1);
 	}
 
 	public void GoToLevel (int level) {
-		SceneManager.LoadScene (level);
+		if(level < 3)
+		{
+			CurrentLevel = level;
+			SceneManager.LoadScene (level);
+		}
+		else
+		{
+			GoToMenu();
+		}
+	}
+
+	private void ShowNextLevel(int numberOfStars)
+	{
+		player.StopPlayer();
+		playerCamera.ReleaseMouse();
+		uImanager.ShowNextLevelPanel(numberOfStars);
 	}
 }
