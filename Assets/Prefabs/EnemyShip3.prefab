@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247546251a36754c8da270f49d4e02c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1053396496268820, guid: 4f2f40cf2cfcd284795c83fc1f5de09e,
+  bulletPrefab: {fileID: 1453045930943146, guid: 004f8ad3f6b273a48b14c9a2b35aef98,
     type: 2}
   bulletSpawn: {fileID: 4798168936462912}
   fireSpeed: 30
@@ -427,6 +427,7 @@ MonoBehaviour:
   pathColor: {r: 0.39999998, g: 0.82560635, b: 1, a: 1}
   speed: 2
   target: {fileID: 0}
+  lookAtNextPoint: 1
   stoped: 0
   gizmoSize: 1
 --- !u!198 &198089293536151636

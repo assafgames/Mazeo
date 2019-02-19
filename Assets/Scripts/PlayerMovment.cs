@@ -16,6 +16,7 @@ public class PlayerMovment : MonoBehaviour, IStopable {
 	public float maxTurnAngle = 30.0F;
 	private float turnVelocity = 0.0F;
 	private float xTurn = 0.0F;
+	private float yTurn = 0.0F;
 	private Rigidbody rb;
 	private Burners burners;
 	private bool stoped = false;
@@ -80,7 +81,16 @@ public class PlayerMovment : MonoBehaviour, IStopable {
 		} else {
 			xTurn = 0;
 		}
-		ship.transform.localRotation = new Quaternion (xTurn, 180, 00, 0);
+
+		if (forwardSpeed > 0.2f) {
+			yTurn = Mathf.SmoothDamp (yTurn, maxTurnAngle, ref turnVelocity, smoothTime);
+		} else if (forwardSpeed < -0.2f) {
+			yTurn = Mathf.SmoothDamp (yTurn, -maxTurnAngle, ref turnVelocity, smoothTime);
+		} else {
+			yTurn = 0;
+		}
+
+		ship.transform.localRotation = new Quaternion (xTurn, 180, yTurn, 0);
 
 		// move
 		rb.velocity = Vector3.zero; //this prevents the rb from move if it had a force aplayed to it
